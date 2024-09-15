@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+#overview {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.summary-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #343a40;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+#overview {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.summary-box {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #overview {
+      flex-direction: column;
+  }
+
+  .summary-box {
+      margin-bottom: 20px;
+  }
+}
+
+/* Form Styling */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+#monthly summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
